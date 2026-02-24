@@ -58,7 +58,7 @@ def send_rcon(command):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python rcon_cs16.py <command>")
+        print("Usage: python rcon_cs.py <command>")
         sys.exit(1)
 
     send_rcon(" ".join(sys.argv[1:]))
