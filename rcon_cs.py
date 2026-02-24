@@ -1,11 +1,10 @@
 import socket
 import sys
-import time
 import re
 import configparser
 
 CS_CONFIG = configparser.ConfigParser()
-CS_CONFIG.read(r"_config-counterstrike.ini")
+CS_CONFIG.read("rcon_cs-config.ini")
 
 SERVER_IP = CS_CONFIG.get("RCON", "IPAddress")
 SERVER_PORT = CS_CONFIG.getint("RCON", "Port")
