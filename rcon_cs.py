@@ -25,7 +25,6 @@ def get_challenge(sock, ip, port):
 
     return None
 
-
 def send_rcon(ip, port, password, command):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.settimeout(3)
@@ -58,7 +57,6 @@ def send_rcon(ip, port, password, command):
         pass
 
     sock.close()
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Counter-Strike 1.6 RCON CLI")
