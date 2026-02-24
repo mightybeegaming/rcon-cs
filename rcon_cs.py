@@ -16,11 +16,11 @@ def get_challenge(sock, ip, port):
             return match.group(1)
 
     except ConnectionResetError:
-        print("Connection reset - wrong IP/port or server unreachable")
+        print("Connection Reset - Wrong IP/Port/Password or server unreachable.")
         return None
 
     except socket.timeout:
-        print("Timeout - no response from server")
+        print("Timeout - No response from server.")
         return None
 
     return None
@@ -33,7 +33,7 @@ def send_rcon(ip, port, password, command):
     challenge = get_challenge(sock, ip, port)
 
     if not challenge:
-        print("Failed to get challenge")
+        print("Failed to get challenge.")
         return
 
     packet = (
