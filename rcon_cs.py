@@ -59,7 +59,7 @@ def interactive_rcon(ip, port, password):
         return
 
     print(f"Connected to {ip}:{port}")
-    print("Type commands. Type ':q' to close.\n")
+    print("Type ':q' to disconnect.\n")
 
     while True:
         try:
@@ -97,10 +97,10 @@ def single_command(ip, port, password, command):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Counter-Strike 1.6 RCON CLI")
 
-    parser.add_argument("-i", "--ip", required=True, help="IP address")
-    parser.add_argument("-p", "--port", required=True, type=int, help="Port")
-    parser.add_argument("-a", "--password", required=True, help="Password")
-    parser.add_argument("command", nargs="*", help="Command to execute")
+    parser.add_argument("-i", "--ip", required=True, help="IP Address of the Counter-Strike server.")
+    parser.add_argument("-p", "--port", required=True, type=int, help="Port of the Counter-Strike server.")
+    parser.add_argument("-a", "--password", required=True, help="RCON Password of the Counter-Strike server.")
+    parser.add_argument("command", nargs="*", help="Command to execute.")
 
     args = parser.parse_args()
     if args.command:
