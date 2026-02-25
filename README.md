@@ -10,8 +10,8 @@ Download the [latest release](https://github.com/raffysucilan/rcon-cs/releases).
 This is a sample command to get the server status.  
 `rcon_cs -i IP -p PORT -a PASSWORD status`
 
-### Interactive Mode
-Interactive mode allows the connection to stay open as long as the window is alive.  
+### Persistent Mode
+Persistent mode allows the connection to stay open as long as the window is alive.  
 When the connection is open, only the actual commands are required by the CLI.
 
 This is a sample .bat that will open a persistent window.

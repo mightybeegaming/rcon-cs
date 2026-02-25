@@ -49,7 +49,7 @@ def send_command(sock, ip, port, password, challenge, command):
         print("Connection lost.")
 
 
-def interactive_rcon(ip, port, password):
+def persistent_rcon(ip, port, password):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.settimeout(2)
 
@@ -108,5 +108,5 @@ if __name__ == "__main__":
         command_str = " ".join(args.command)
         single_command(args.ip, args.port, args.password, command_str)
     else:
-        # Interactive mode
-        interactive_rcon(args.ip, args.port, args.password)
+        # Persistent mode
+        persistent_rcon(args.ip, args.port, args.password)
